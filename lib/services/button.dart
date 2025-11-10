@@ -7,8 +7,6 @@ Widget createButton(
   Function(String) onButtonClick,
 ) {
   return SizedBox(
-    width: 70, // Taille uniforme
-    height: 70, // Même taille pour tous
     child: ElevatedButton(
       onPressed: () => onButtonClick(text),
       style: ElevatedButton.styleFrom(

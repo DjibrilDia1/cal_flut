@@ -14,9 +14,9 @@ class Calculatrice extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: "Calculatrice",
+      // Pour enlever la baniere a droite
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        primarySwatch: Colors.blue,
         scaffoldBackgroundColor: Colors.grey[200],
       ),
       home: CalculatricePage(),
@@ -40,13 +40,13 @@ class CalculatricePageState extends State<CalculatricePage> {
     return Scaffold(
       appBar: AppBar(
         title: const Text("Ma Calculatrice simple"),
+        backgroundColor: const Color.fromARGB(255, 247, 246, 246),
         centerTitle: true,
       ),
       body: Column(
-        mainAxisAlignment: MainAxisAlignment.end,
         children: [
           zoneAffichage(display, result),
-          Expanded(child: clavier(onButtonClick)),
+          clavier(onButtonClick)
         ],
       ),
     );
